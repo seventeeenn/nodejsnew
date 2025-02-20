@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.text{
+    font-size: 35px;
+    margin: -40px 0 0 0;
+}
+.big-text{
+    margin: 0;
+    font-size: 150px;
+}
+hr{
+    border: none;
+    border-top: 6px solid black;
+    width: 161px;
+    margin: 0 0 -17px 0;
+    rotate: 40deg;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/reg.css">
+    <title>Registration</title>
+</head>
+<body>
+    <div class="myForm">
+        <form action="/register" method="post" id="form">
+            <div class="reg-form">
+                <p class="main-text">Registration</p>
+                <div class="login form-group">
+                    <input id="user" name="user" type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="name form-group">
+                    <input id="name" name="name" type="text" required>
+                    <label>Name</label>
+                </div>
+                <div class="surname form-group">
+                    <input id="surname" name="surname" type="text" required>
+                    <label>Surname</label>
+                </div>
+                <div class="birthDate form-group">
+                    <input id="date" name="date" type="date" required>
+                </div>
+                <div class="password form-group">
+                    <input id="inPass" name="inPass" type="password" required>
+                    <label>Password</label>
+                    <button type="button" class="showPass" onclick="showPass()"><img id="imgPass1" src="./images/showpass.png" alt=""></button>
+                    <div class="error" id="errorPass"></div>
+                </div>
+                <div class="password form-group">
+                    <input id="confInPass" name="confInPass" type="password" required>
+                    <label>Confirm password</label>
+                    <button type="button" class="showPass" onclick="confShowPass()"><img id="imgPass2" src="./images/showpass.png" alt=""></button>
+                    <div class="error" id="errorConfPass"></div>
+                </div>
+                <div class="file">
+                    <label for="fileUpload">Загрузите изображение:</label>
+                    <input type="file" id="fileUpload" name="fileUpload" accept="image/*">
+                    <div class="error" id="errorAll"></div>
+                    <div class="gray">Already have an account?&nbsp;<a class="gray" href="./login.html">Login</a></div>
+                </div>
+                <div class="buttons">
+                    <input id="sendBut" value="Done" type="submit" onclick="validatePassword()">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="./scripts/requests.js"></script>
+<script src="./scripts/login.js"></script>
+<script src="./scripts/reg.js"></script>
+</html>

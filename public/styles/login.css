@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.myForm{
+    scale: 1.5;
+    background-color: white;
+    height: 200px;
+    border-radius: 15px;
+}
+.main-text{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 30px;
+}
+.reg-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px;
+}
+
+.form-group{
+    position: relative;
+}
+.form-group label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #130e0e;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.form-group input:focus ~ label,
+.form-group input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: #130e0e;
+    font-size: 12px;
+}
+.form-group input{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    color: #130e0e;
+    border: none;
+    border-bottom: 1px solid #130e0e;
+    outline: none;
+    background: transparent;
+}
+
+.password{
+    position: relative;
+}
+.showPass{
+    position: absolute;
+    right: 0;
+    top: 7px;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.showPass img{
+    height: 20px;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+#sendBut, #getUserDataButton{
+    background: linear-gradient(to right, #37c64a, #0ca735);
+}
+#clearBut{
+    background: linear-gradient(to right, #be391f, #bb1b1b);
+}
+#sendBut, #clearBut, #getUserDataButton{
+    font-weight: 600;
+    color: white;
+    padding: 10px 5px;
+    border-radius: 10px;
+    width: 120px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+#sendBut:hover, #clearBut:hover{
+    transform: scale(1.1);
+}

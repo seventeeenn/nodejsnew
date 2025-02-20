@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+}
+p{
+    font-size: 50px;
+    cursor: pointer;
+}
