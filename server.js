@@ -9,13 +9,13 @@ let users = [];
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/scripts', express.static(path.join(__dirname, 'public/scripts')));
+app.use(express.static(path.join(__dirname, 'views')));
+app.use(express.static(path.join(__dirname, 'routes')));
 app.use('/styles', express.static(path.join(__dirname, 'public/styles')));
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/home.html'));
+  res.sendFile(path.join(__dirname, 'views/home.html'));
 });
 
 app.post('/register', (req, res) => {

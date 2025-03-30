@@ -1,31 +1,9 @@
-function showPass() {
-    const passwordField = document.getElementById('inPass');
-    const passwordFieldType = passwordField.getAttribute('type');
-    const imgPass = document.getElementById('imgPass1');
+const express = require('express');
+const router = express.Router();
 
-    if (passwordFieldType === 'password') {
-        passwordField.setAttribute('type', 'text');
-        imgPass.setAttribute('src', 'images/hidepass.png');
-    } else {
-        passwordField.setAttribute('type', 'password');
-        imgPass.setAttribute('src', 'images/showpass.png');
-    }
-};
+// Render the registration page
+router.get('/', (req, res) => {
+  res.render('login', { title: 'Login Page' });
+});
 
-function confShowPass() {
-    const passwordField = document.getElementById('confInPass');
-    const passwordFieldType = passwordField.getAttribute('type');
-    const imgPass = document.getElementById('imgPass2');
-
-    if (passwordFieldType === 'password') {
-        passwordField.setAttribute('type', 'text');
-        imgPass.setAttribute('src', 'images/hidepass.png');
-    } else {
-        passwordField.setAttribute('type', 'password');
-        imgPass.setAttribute('src', 'images/showpass.png');
-    }
-};
-
-function resetForm() {
-    document.getElementById('form').reset();
-};
+module.exports = router;
